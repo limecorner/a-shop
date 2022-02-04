@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>a shop</title>
+</head>
+
+<body>
+  <main id="main-content">
+    <div class="main-container">
+      <div class="left-content">
+        <div id="step-control" class="stepper-panel">
+          <div class="container">
+            <div>
+              <h3 class="step-title">結帳</h3>
+            </div>
+            <div class="stepper-container">
+              <span class="step">
+                <span class="circle-container">1</span>
+                <span class="label-container">寄送地址</span>
+              </span>
+              <span class="step">
+                <span class="circle-container">2</span>
+                <span class="connect-line"></span>
+                <span class="label-container">運送方式</span>
+              </span>
+              <span class="step">
+                <span class="circle-container">3</span>
+                <span class="connect-line"></span>
+                <span class="label-container">付款資訊</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-panel">
+          <div class="container">
+            <form id="a-form">
+              <div class="form-content">
+                <div class="part">
+                  <h2 class="current-part-title">寄送地址</h2>
+                  <div class="form-row">
+                    <label for="">稱謂</label>
+                    <span class="select-wrapper">
+                      <select name="sex" id="sex" required>
+                        <option value="male">先生</option>
+                        <option value="female">女士</option>
+                      </select>
+                    </span>
+                    <label for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
+                  </div>
+                  <div class="form-row"><label for="">電話</label><input id="phone" type="text" placeholder="請輸入行動電話">
+                  </div>
+                  <div class="form-row"><label for="">Email</label><input id="email" type="text" placeholder="請輸入電子郵件">
+                  </div>
+                  <div class="form-row">
+                    <label for="">縣市</label>
+                    <span class="select-wrapper">
+                      <select name="a-city" id="a-city" required>
+                        <option value="">請選擇縣市</option>
+                        <option value="male">新北市</option>
+                        <option value="female">高雄市</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="form-row">
+                    <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">
+                  </div>
+                </div>
+                <div class="part">
+                  <h2 class="current-part-title">運送方式</h2>
+                  <div class="form-row">
+                    <div>
+                      <input name="ship" type="radio" value="standard"><label for="">標準運送 <br> 約3~7個工作天</label>
+                      <span>免費</span>
+                    </div>
+                    <div>
+                      <input name="ship" type="radio" value="DHL"><label for="">DHL貨運<br>48小時內送達</label>
+                      <span>$500</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="part">
+                  <h2 class="current-part-title">付款資訊</h2>
+                  <div class="form-row"><label for="">持卡人姓名</label><input id="owner-name" type="text"
+                      placeholder="John Doe">
+                  </div>
+                  <div class="form-row"><label for="">卡號</label><input id="card-number" class="w-50" type="text"
+                      placeholder="1111 2222 3333 4444"></div>
+                  <div class="form-row"><label for="">有效期限</label><input id="expiration-date" type="text"
+                      placeholder="MM/YY">
+                    <label for="">CVC / CCV</label><input id="card-code" type="text" placeholder="123">
+                  </div>
+                </div>
+              </div>
+              <div id="btn-control" class="control-panel">
+                <button class="btn btn-outline">上一步</button>
+                <button class="btn btn-primary">下一步</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="cart">
+          <div class="container">
+            <div class="card">
+              <img src="images/photo-1@2x.png" alt="">
+              <div class="product-info">
+                <h5>破壞補釘修身牛仔褲</h5>
+                <div><span class="minus">-</span>
+                  <span>1</span>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+            </div>
+            <!-- 第一張ok再來複製 -->
+            <div class="card"></div>
+            <p><span>運費</span>
+              <span>免費</span>
+            </p>
+            <p><span>小計</span>
+              <span>$5,298</span>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
