@@ -43,14 +43,20 @@
                 <div class="part">
                   <h2 class="current-part-title">寄送地址</h2>
                   <div class="form-row">
-                    <label for="">稱謂</label>
-                    <span class="select-wrapper">
-                      <select name="sex" id="sex" required>
-                        <option value="male">先生</option>
-                        <option value="female">女士</option>
-                      </select>
-                    </span>
-                    <label for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
+                    <div class="name-area-wrapper">
+                      <div class="name-area-sex">
+                        <label class="name-label" for="">稱謂</label>
+                        <div class="select-wrapper">
+                          <select name="sex" id="sex" required>
+                            <option value="male">先生</option>
+                            <option value="female">女士</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="name-area-name">
+                        <label class="name-label" for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
+                      </div>
+                    </div>
                   </div>
                   <div class="form-row"><label for="">電話</label><input id="phone" type="text" placeholder="請輸入行動電話">
                   </div>
@@ -58,13 +64,13 @@
                   </div>
                   <div class="form-row">
                     <label for="">縣市</label>
-                    <span class="select-wrapper">
+                    <div class="select-wrapper">
                       <select name="a-city" id="a-city" required>
                         <option value="">請選擇縣市</option>
                         <option value="male">新北市</option>
                         <option value="female">高雄市</option>
                       </select>
-                    </span>
+                    </div>
                   </div>
                   <div class="form-row">
                     <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">

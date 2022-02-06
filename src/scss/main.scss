@@ -326,3 +326,59 @@ img {
   border-radius: 50%;
   color: $white;
 }
+
+%input-style {
+  margin-bottom: 24px;
+  padding-left: 15px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid $light-black;
+  border-radius: 4px;
+}
+
+.form-panel {
+  & .form-row {
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    & input {
+      @extend %input-style;
+    }
+    & select {
+      -webkit-appearance: none;
+      @extend %input-style;
+      background-color: transparent;
+    }
+    & option {
+      background-color: $dark-gray;
+    }
+    & .select-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+      height: 40px;
+      z-index: 0;
+    }
+    & .select-wrapper::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      content: "";
+      border-top: 6px solid $black;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      z-index: -1;
+    }
+  }
+  & .name-area-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & .name-area-sex {
+      flex-basis: 35%;
+    }
+    & .name-area-name {
+      flex-basis: 55%;
+    }
+  }
+}
