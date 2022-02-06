@@ -319,6 +319,10 @@ img {
 }
 
 // form 共用樣式
+.current-part-title {
+  margin-bottom: 24px;
+}
+
 %input-style {
   margin-bottom: 24px;
   padding-left: 15px;
@@ -381,9 +385,6 @@ select {
 
 // form: ship-section
 .ship-section {
-  & .current-part-title {
-    margin-bottom: 24px;
-  }
   .ship-way-wrapper {
     display: flex;
     justify-content: space-between;
@@ -424,6 +425,17 @@ select {
       margin-right: 34px;
       white-space: nowrap;
       font-size: 14px;
+    }
+  }
+}
+
+.pay-section {
+  & .form-row:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .pay-half-area {
+      flex-basis: 45%;
     }
   }
 }

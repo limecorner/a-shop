@@ -632,6 +632,9 @@ img {
       .stepper-panel .stepper-container .step .label-container {
         display: none; }
 
+.current-part-title {
+  margin-bottom: 24px; }
+
 input, select {
   margin-bottom: 24px;
   padding-left: 15px;
@@ -676,9 +679,6 @@ select {
   .address-section .name-area-wrapper .name-area-name {
     flex-basis: 55%; }
 
-.ship-section .current-part-title {
-  margin-bottom: 24px; }
-
 .ship-section .ship-way-wrapper {
   display: flex;
   justify-content: space-between;
@@ -714,4 +714,11 @@ select {
     margin-right: 34px;
     white-space: nowrap;
     font-size: 14px; }
+
+.pay-section .form-row:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .pay-section .form-row:last-child .pay-half-area {
+    flex-basis: 45%; }
 
