@@ -40,7 +40,7 @@
           <div class="container">
             <form id="a-form">
               <div class="form-content">
-                <div class="part">
+                <div class="part address-section">
                   <h2 class="current-part-title">寄送地址</h2>
                   <div class="form-row">
                     <div class="name-area-wrapper">
@@ -76,16 +76,21 @@
                     <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">
                   </div>
                 </div>
-                <div class="part">
+                <div class="part ship-section">
                   <h2 class="current-part-title">運送方式</h2>
                   <div class="form-row">
-                    <div>
-                      <input name="ship" type="radio" value="standard"><label for="">標準運送 <br> 約3~7個工作天</label>
-                      <span>免費</span>
+                    <div class="ship-way-wrapper">
+                      <div class="ship-way">
+                        <input name="ship" type="radio" value="standard"><label for="">標準運送 <br> 約 3~7 個工作天</label>
+                      </div>
+                      <div class="ship-price">免費<br></div>
                     </div>
-                    <div>
-                      <input name="ship" type="radio" value="DHL"><label for="">DHL貨運<br>48小時內送達</label>
-                      <span>$500</span>
+                    <div class="ship-way-wrapper">
+                      <div class="ship-way">
+                        <input name="ship" type="radio" value="DHL"><label class="DHL-label" for="">DHL 貨運<br>48
+                          小時內送達</label>
+                      </div>
+                      <div class="ship-price">$500</div>
                     </div>
                   </div>
                 </div>
