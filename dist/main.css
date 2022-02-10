@@ -597,36 +597,42 @@ body {
       position: relative; }
       .stepper-panel .stepper-container .step:nth-child(1) .circle-container::after {
         content: "1";
-        color: #fff; }
+        color: #afb1bd; }
       .stepper-panel .stepper-container .step:nth-child(2) .circle-container::after {
         content: "2";
-        color: #fff; }
+        color: #afb1bd; }
       .stepper-panel .stepper-container .step:nth-child(3) .circle-container::after {
         content: "3";
-        color: #fff; }
+        color: #afb1bd; }
+      .stepper-panel .stepper-container .step.active .circle-container, .stepper-panel .stepper-container .step.checked .circle-container {
+        background-color: #000; }
+        .stepper-panel .stepper-container .step.active .circle-container::after, .stepper-panel .stepper-container .step.checked .circle-container::after {
+          color: #fff; }
+      .stepper-panel .stepper-container .step.active .connect-line, .stepper-panel .stepper-container .step.checked .connect-line {
+        background-color: #000; }
+      .stepper-panel .stepper-container .step.checked .circle-container::after {
+        content: "\2714"; }
       .stepper-panel .stepper-container .step .circle-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 32px;
         height: 32px;
-        background-color: #000;
+        border: 1px solid #afb1bd;
         border-radius: 50%;
-        color: #fff; }
-      .stepper-panel .stepper-container .step .connect-line-left,
-      .stepper-panel .stepper-container .step .connect-line-right {
+        color: #afb1bd; }
+      .stepper-panel .stepper-container .step .connect-line {
         z-index: 20;
         position: absolute;
         top: 16px;
         height: 1px;
-        background-color: #f0f0f5; }
+        background-color: #afb1bd; }
       .stepper-panel .stepper-container .step .connect-line-left {
-        right: calc(-50% + 35%);
-        left: calc(16px + 35%); }
+        left: calc(16px + 35%);
+        right: calc(-50% + 35%); }
       .stepper-panel .stepper-container .step .connect-line-right {
-        right: calc(16px + 35%);
-        left: calc(-50% + 35%);
-        height: 1px; }
+        left: calc(50% + 35%);
+        right: calc(-100% + 16px + 35%); }
       .stepper-panel .stepper-container .step .label-container {
         display: none; }
 

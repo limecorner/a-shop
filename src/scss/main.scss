@@ -251,7 +251,7 @@ body {
   @for $i from 1 through $num {
     &:nth-child(#{$i}) .circle-container::after {
       content: "#{$i}";
-      color: $white;
+      color: $dark-gray;
     }
   }
 }
@@ -273,7 +273,6 @@ body {
   & .stepper-container {
     outline: 2px solid blue;
     display: flex;
-    // justify-content: space-between;
     height: 32px;
     & .step {
       outline: 2px solid pink;
@@ -281,32 +280,49 @@ body {
       display: flex;
       position: relative;
       @include getStepNums(3);
+      &.active,
+      &.checked {
+        & .circle-container {
+          background-color: $black;
+          &::after {
+            color: $white;
+          }
+        }
+        & .connect-line {
+          background-color: $black;
+        }
+      }
+      &.checked {
+        & .circle-container {
+          &::after {
+            content: "\2714";
+          }
+        }
+      }
       & .circle-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 32px;
         height: 32px;
-        background-color: $black;
+        border: 1px solid $dark-gray;
         border-radius: 50%;
-        color: $white;
+        color: $dark-gray;
       }
-      & .connect-line-left,
-      .connect-line-right {
+      & .connect-line {
         z-index: 20;
         position: absolute;
         top: 16px;
         height: 1px;
-        background-color: $light-gray;
+        background-color: $dark-gray;
       }
       & .connect-line-left {
-        right: calc(-50% + 35%);
         left: calc(16px + 35%);
+        right: calc(-50% + 35%);
       }
       & .connect-line-right {
-        right: calc(16px + 35%);
-        left: calc(-50% + 35%);
-        height: 1px;
+        left: calc(50% + 35%);
+        right: calc(-100% + 16px + 35%);
       }
       & .label-container {
         display: none;
