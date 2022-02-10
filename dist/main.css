@@ -784,3 +784,53 @@ select {
     height: 50px;
     border-top: 1px solid #f0f0f5; }
 
+.control-panel-wrapper {
+  position: relative; }
+
+.control-panel {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 414px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border: 1px solid red; }
+  .control-panel .btn {
+    position: relative;
+    height: 46px;
+    border-radius: 8px; }
+    .control-panel .btn::before,
+    .control-panel .btn span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+    .control-panel .btn::before {
+      font-size: 20px; }
+  .control-panel .btn-outline {
+    width: 30%;
+    background-color: pink; }
+    .control-panel .btn-outline::before {
+      left: 0;
+      content: "\27F5"; }
+  .control-panel .btn-primary {
+    width: 100%;
+    background-color: #f67599;
+    color: #fff; }
+    .control-panel .btn-primary::before {
+      right: 25%;
+      content: "\2192"; }
+    .control-panel .btn-primary span {
+      right: 50%; }
+
+.btn-outline.btn-mobile-half {
+  display: block; }
+
+.btn-primary.btn-mobile-half {
+  width: 156px; }
+  .btn-primary.btn-mobile-half::before {
+    right: 25%;
+    content: "\2192"; }
+  .btn-primary.btn-mobile-half span {
+    right: 50%; }
+

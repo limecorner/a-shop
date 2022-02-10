@@ -519,3 +519,72 @@ $button-margin: 24px;
     border-top: 1px solid $light-gray;
   }
 }
+
+// button
+.control-panel-wrapper {
+  position: relative;
+}
+
+.control-panel {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: $cart-height + $section-margin + $button-margin;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border: 1px solid red;
+  & .btn {
+    position: relative;
+    height: 46px;
+    border-radius: 8px;
+    &::before,
+    & span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      font-size: 20px;
+    }
+  }
+  & .btn-outline {
+    width: 30%;
+    background-color: pink;
+    &::before {
+      left: 0;
+      content: "\27F5";
+    }
+  }
+  & .btn-primary {
+    width: 100%;
+    background-color: #f67599;
+    color: #fff;
+    &::before {
+      right: 25%;
+      content: "\2192";
+    }
+    & span {
+      right: 50%;
+    }
+  }
+}
+
+.btn-outline {
+  &.btn-mobile-half {
+    display: block;
+  }
+}
+
+.btn-primary {
+  &.btn-mobile-half {
+    width: 156px;
+    &::before {
+      right: 25%;
+      content: "\2192";
+    }
+    & span {
+      right: 50%;
+    }
+  }
+}
