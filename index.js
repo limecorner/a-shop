@@ -10,7 +10,7 @@ let step = 0
 function handleBtnControlClicked(e) {
   e.preventDefault()
   const nowStep = steps[step]
-  if (e.target.matches('.btn-primary') && e.target.children[0].innerText === '下一步') {
+  if (e.target.matches('.btn-primary') && e.target.innerText === '下一步') {
     const nextStep = steps[step + 1]
     nowStep.classList.remove('active')
     nowStep.classList.add('checked')
@@ -34,17 +34,19 @@ function setBtnState() {
   if (step === 0) {
     prevBtn.classList.remove('btn-mobile-half')
     prevBtn.classList.add('d-none')
+    prevBtn.classList.add('hidden')
     nextBtn.classList.remove('btn-mobile-half')
   }
   if (step === 1) {
     prevBtn.classList.remove('d-none')
     prevBtn.classList.add('btn-mobile-half')
+    prevBtn.classList.remove('hidden')
     nextBtn.classList.add('btn-mobile-half')
   }
   if (step === 2) {
-    nextBtn.children[0].innerText = '確認下單'
+    nextBtn.innerText = '確認下單'
   } else {
-    nextBtn.children[0].innerText = '下一步'
+    nextBtn.innerText = '下一步'
   }
 }
 

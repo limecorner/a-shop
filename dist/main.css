@@ -823,24 +823,22 @@ select {
       content: "\27F5"; }
   .control-panel .btn-primary {
     width: 100%;
+    padding-left: 35%;
     background-color: #f67599;
     color: #fff; }
     .control-panel .btn-primary::before {
       right: 25%;
       content: "\2192"; }
-    .control-panel .btn-primary span {
-      right: 50%; }
 
 .btn-outline.btn-mobile-half {
   display: block; }
 
 .btn-primary.btn-mobile-half {
-  width: 156px; }
+  width: 156px;
+  padding-left: 38px; }
   .btn-primary.btn-mobile-half::before {
     right: 25%;
     content: "\2192"; }
-  .btn-primary.btn-mobile-half span {
-    right: 50%; }
 
 .form-panel {
   outline: 2px solid red; }
@@ -873,6 +871,17 @@ select {
   .right-content {
     width: 40%;
     height: 492px; }
+  .stepper-panel .stepper-container .step {
+    align-items: center; }
+    .stepper-panel .stepper-container .step .connect-line-left {
+      left: 85%;
+      right: -10%; }
+    .stepper-panel .stepper-container .step .connect-line-right {
+      left: 95%;
+      right: -20%; }
+    .stepper-panel .stepper-container .step .label-container {
+      display: inline-block;
+      margin-left: 5px; }
   .form-content .address-section .part-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -907,12 +916,15 @@ select {
       position: absolute;
       top: -24px;
       width: 100%;
-      border-top: 1px solid black; }
+      border-top: 1px solid #afb1bd; }
   .control-panel {
     position: static;
     transform: translateX(0); }
     .control-panel .btn-outline {
       display: block; }
+      .control-panel .btn-outline.hidden {
+        visibility: hidden; }
     .control-panel .btn-primary {
-      width: 174px; } }
+      width: 174px;
+      padding-left: 48px; } }
 
