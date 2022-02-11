@@ -581,11 +581,14 @@ body {
   width: 95%;
   margin: 0 auto; }
 
+.step-title {
+  font-size: 24px; }
+
+.main-container {
+  margin-top: 48px; }
+
 .stepper-panel {
-  outline: 2px solid red;
-  margin-top: 72px; }
-  .stepper-panel .step-title {
-    font-size: 24px; }
+  outline: 2px solid red; }
   .stepper-panel .stepper-container {
     outline: 2px solid blue;
     display: flex;
@@ -800,8 +803,7 @@ select {
   top: 414px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  border: 1px solid red; }
+  width: 100%; }
   .control-panel .btn {
     position: relative;
     height: 46px;
@@ -839,4 +841,78 @@ select {
     content: "\2192"; }
   .btn-primary.btn-mobile-half span {
     right: 50%; }
+
+.form-panel {
+  outline: 2px solid red; }
+  .form-panel .control-panel {
+    outline: 2px solid blue; }
+
+.right-content {
+  outline: 2px solid green; }
+
+@media screen and (min-width: 375px) {
+  .main-container {
+    display: flex;
+    justify-content: space-around; }
+  .left-content {
+    outline: 2px solid green;
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    height: 492px; }
+  .form-panel {
+    flex: 1; }
+    .form-panel .container {
+      height: 100%; }
+  #a-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+    #a-form .form-content {
+      flex: 1; }
+  .right-content {
+    width: 40%;
+    height: 492px; }
+  .form-content .address-section .part-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0 30px; }
+    .form-content .address-section .part-container .form-row:nth-child(1) {
+      grid-column: 1/7; }
+    .form-content .address-section .part-container .form-row:nth-child(2) {
+      grid-column: 1/4; }
+    .form-content .address-section .part-container .form-row:nth-child(3) {
+      grid-column: 4/7;
+      padding-top: 2px; }
+    .form-content .address-section .part-container .form-row:nth-child(4) {
+      grid-column: 1/3; }
+    .form-content .address-section .part-container .form-row:nth-child(5) {
+      grid-column: 3/7; }
+  .form-content .ship-section .ship-way-wrapper {
+    width: 80%; }
+  .form-content .pay-section .part-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0 30px; }
+    .form-content .pay-section .part-container .form-row:nth-child(1) {
+      grid-column: 1/5; }
+    .form-content .pay-section .part-container .form-row:nth-child(2) {
+      grid-column: 1/5; }
+    .form-content .pay-section .part-container .form-row:nth-child(3) {
+      grid-column: 1/7; }
+  .control-panel-wrapper {
+    position: relative; }
+    .control-panel-wrapper::after {
+      content: "";
+      position: absolute;
+      top: -24px;
+      width: 100%;
+      border-top: 1px solid black; }
+  .control-panel {
+    position: static;
+    transform: translateX(0); }
+    .control-panel .btn-outline {
+      display: block; }
+    .control-panel .btn-primary {
+      width: 174px; } }
 

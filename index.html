@@ -12,13 +12,13 @@
 
 <body>
   <main id="main-content">
-    <div class="main-container">
+    <div class="container">
+      <h3 class="step-title mt-6">結帳</h3>
+    </div>
+    <div class="main-container ">
       <div class="left-content">
         <div id="step-control" class="stepper-panel mb-6">
           <div class="container">
-            <div>
-              <h3 class="step-title mb-6">結帳</h3>
-            </div>
             <div class="stepper-container">
               <span class="step active">
                 <span class="circle-container"></span>
@@ -44,39 +44,43 @@
               <div class="form-content">
                 <div class="part address-section ">
                   <h2 class="current-part-title">寄送地址</h2>
-                  <div class="form-row">
-                    <div class="name-area-wrapper">
-                      <div class="name-area-sex">
-                        <label class="name-label" for="">稱謂</label>
-                        <div class="select-wrapper">
-                          <select name="sex" id="sex" required>
-                            <option value="male">先生</option>
-                            <option value="female">女士</option>
-                          </select>
+                  <div class="part-container">
+                    <div class="form-row">
+                      <div class="name-area-wrapper">
+                        <div class="name-area-sex">
+                          <label class="name-label" for="">稱謂</label>
+                          <div class="select-wrapper">
+                            <select name="sex" id="sex" required>
+                              <option value="male">先生</option>
+                              <option value="female">女士</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="name-area-name">
+                          <label class="name-label" for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
                         </div>
                       </div>
-                      <div class="name-area-name">
-                        <label class="name-label" for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
+                    </div>
+                    <div class="form-row"><label for="">電話</label><input id="phone" type="text" placeholder="請輸入行動電話">
+                    </div>
+                    <div class="form-row"><label for="">Email</label><input id="email" type="text"
+                        placeholder="請輸入電子郵件">
+                    </div>
+                    <div class="form-row">
+                      <label for="">縣市</label>
+                      <div class="select-wrapper">
+                        <select name="a-city" id="a-city">
+                          <option value="">請選擇縣市</option>
+                          <option value="male">新北市</option>
+                          <option value="female">高雄市</option>
+                        </select>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-row"><label for="">電話</label><input id="phone" type="text" placeholder="請輸入行動電話">
-                  </div>
-                  <div class="form-row"><label for="">Email</label><input id="email" type="text" placeholder="請輸入電子郵件">
-                  </div>
-                  <div class="form-row">
-                    <label for="">縣市</label>
-                    <div class="select-wrapper">
-                      <select name="a-city" id="a-city">
-                        <option value="">請選擇縣市</option>
-                        <option value="male">新北市</option>
-                        <option value="female">高雄市</option>
-                      </select>
+                    <div class="form-row">
+                      <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">
                     </div>
                   </div>
-                  <div class="form-row">
-                    <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">
-                  </div>
+
                 </div>
                 <div class="part ship-section  d-none">
                   <h2 class="current-part-title">運送方式</h2>
@@ -98,30 +102,36 @@
                 </div>
                 <div class="part pay-section  d-none">
                   <h2 class="current-part-title">付款資訊</h2>
-                  <div class="form-row"><label for="">持卡人姓名</label><input id="owner-name" type="text"
-                      placeholder="John Doe">
-                  </div>
-                  <div class="form-row">
-                    <label for="">卡號</label><input id="card-number" type="text" placeholder="1111 2222 3333 4444">
-                  </div>
-                  <div class="form-row">
-                    <div class="pay-half-area">
-                      <label for="">有效期限</label>
-                      <input id="expiration-date" type="text" placeholder="MM/YY">
+                  <div class="part-container">
+                    <div class="form-row"><label for="">持卡人姓名</label><input id="owner-name" type="text"
+                        placeholder="John Doe">
                     </div>
-                    <div class="pay-half-area">
-                      <label for="">CVC / CCV</label>
-                      <input id="card-code" type="text" placeholder="123">
+                    <div class="form-row">
+                      <label for="">卡號</label><input id="card-number" type="text" placeholder="1111 2222 3333 4444">
                     </div>
+                    <div class="form-row">
+                      <div class="pay-half-area">
+                        <label for="">有效期限</label>
+                        <input id="expiration-date" type="text" placeholder="MM/YY">
+                      </div>
+                      <div class="pay-half-area">
+                        <label for="">CVC / CCV</label>
+                        <input id="card-code" type="text" placeholder="123">
+                      </div>
 
+                    </div>
                   </div>
+
                 </div>
               </div>
               <div class="control-panel-wrapper">
-                <div id="btn-control" class="control-panel">
-                  <button class="btn btn-outline d-none">上一步</button>
-                  <button class="btn btn-primary "><span>下一步</span> </button>
+                <div class="container">
+                  <div id="btn-control" class="control-panel">
+                    <button class="btn btn-outline d-none">上一步</button>
+                    <button class="btn btn-primary "><span>下一步</span> </button>
+                  </div>
                 </div>
+
               </div>
             </form>
           </div>
