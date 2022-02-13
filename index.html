@@ -12,166 +12,168 @@
 
 <body>
   <main id="main-content">
-    <div class="container">
-      <h3 class="step-title mt-6">結帳</h3>
-    </div>
-    <div class="main-container ">
-      <div class="left-content">
-        <div id="step-control" class="stepper-panel mb-6">
-          <div class="container">
-            <div class="stepper-container">
-              <span class="step active">
-                <span class="circle-container"></span>
-                <span class="connect-line connect-line-left"></span>
-                <span class="label-container">寄送地址</span>
-              </span>
-              <span class="step d-flex justify-content-center">
-                <span class="circle-container"></span>
-                <span class="connect-line connect-line-right"></span>
-                <span class="label-container">運送方式</span>
-              </span>
-              <span class="step d-flex justify-content-end">
-                <span class="circle-container"></span>
+    <div class="main-content-container">
+      <div class="container">
+        <h3 class="step-title mt-6">結帳</h3>
+      </div>
+      <div class="main-container ">
+        <div class="left-content">
+          <div id="step-control" class="stepper-panel mb-6">
+            <div class="container">
+              <div class="stepper-container">
+                <span class="step active">
+                  <span class="circle-container"></span>
+                  <span class="connect-line connect-line-left"></span>
+                  <span class="label-container">寄送地址</span>
+                </span>
+                <span class="step d-flex justify-content-center">
+                  <span class="circle-container"></span>
+                  <span class="connect-line connect-line-right"></span>
+                  <span class="label-container">運送方式</span>
+                </span>
+                <span class="step d-flex justify-content-end">
+                  <span class="circle-container"></span>
 
-                <span class="label-container">付款資訊</span>
-              </span>
+                  <span class="label-container">付款資訊</span>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-panel">
-          <div class="container">
-            <form id="a-form">
-              <div class="form-content">
-                <div class="part address-section ">
-                  <h2 class="current-part-title">寄送地址</h2>
-                  <div class="part-container">
-                    <div class="form-row">
-                      <div class="name-area-wrapper">
-                        <div class="name-area-sex">
-                          <label class="name-label" for="">稱謂</label>
-                          <div class="select-wrapper">
-                            <select name="sex" id="sex" required>
-                              <option value="male">先生</option>
-                              <option value="female">女士</option>
-                            </select>
+          <div class="form-panel">
+            <div class="container">
+              <form id="a-form">
+                <div class="form-content">
+                  <div class="part address-section ">
+                    <h2 class="current-part-title">寄送地址</h2>
+                    <div class="part-container">
+                      <div class="form-row">
+                        <div class="name-area-wrapper">
+                          <div class="name-area-sex">
+                            <label class="name-label" for="">稱謂</label>
+                            <div class="select-wrapper">
+                              <select name="sex" id="sex" required>
+                                <option value="male">先生</option>
+                                <option value="female">女士</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="name-area-name">
+                            <label class="name-label" for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
                           </div>
                         </div>
-                        <div class="name-area-name">
-                          <label class="name-label" for="">姓名</label><input id="name" type="text" placeholder="請輸入姓名">
+                      </div>
+                      <div class="form-row"><label for="">電話</label><input id="phone" type="text" placeholder="請輸入行動電話">
+                      </div>
+                      <div class="form-row"><label for="">Email</label><input id="email" type="text"
+                          placeholder="請輸入電子郵件">
+                      </div>
+                      <div class="form-row">
+                        <label for="">縣市</label>
+                        <div class="select-wrapper">
+                          <select name="a-city" id="a-city">
+                            <option value="">請選擇縣市</option>
+                            <option value="male">新北市</option>
+                            <option value="female">高雄市</option>
+                          </select>
                         </div>
                       </div>
-                    </div>
-                    <div class="form-row"><label for="">電話</label><input id="phone" type="text" placeholder="請輸入行動電話">
-                    </div>
-                    <div class="form-row"><label for="">Email</label><input id="email" type="text"
-                        placeholder="請輸入電子郵件">
-                    </div>
-                    <div class="form-row">
-                      <label for="">縣市</label>
-                      <div class="select-wrapper">
-                        <select name="a-city" id="a-city">
-                          <option value="">請選擇縣市</option>
-                          <option value="male">新北市</option>
-                          <option value="female">高雄市</option>
-                        </select>
+                      <div class="form-row">
+                        <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">
                       </div>
                     </div>
+
+                  </div>
+                  <div class="part ship-section  d-none">
+                    <h2 class="current-part-title">運送方式</h2>
                     <div class="form-row">
-                      <label for="">地址</label><input id="address" type="text" placeholder="請輸入地址">
+                      <div class="ship-way-wrapper">
+                        <div class="ship-way">
+                          <input name="ship" type="radio" value="standard"><label for="">標準運送 <br> 約 3~7 個工作天</label>
+                        </div>
+                        <div class="ship-price">免費<br></div>
+                      </div>
+                      <div class="ship-way-wrapper">
+                        <div class="ship-way">
+                          <input name="ship" type="radio" value="DHL"><label class="DHL-label" for="">DHL 貨運<br>48
+                            小時內送達</label>
+                        </div>
+                        <div class="ship-price">$500</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="part pay-section  d-none">
+                    <h2 class="current-part-title">付款資訊</h2>
+                    <div class="part-container">
+                      <div class="form-row"><label for="">持卡人姓名</label><input id="owner-name" type="text"
+                          placeholder="John Doe">
+                      </div>
+                      <div class="form-row">
+                        <label for="">卡號</label><input id="card-number" type="text" placeholder="1111 2222 3333 4444">
+                      </div>
+                      <div class="form-row">
+                        <div class="pay-half-area">
+                          <label for="">有效期限</label>
+                          <input id="expiration-date" type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="pay-half-area">
+                          <label for="">CVC / CCV</label>
+                          <input id="card-code" type="text" placeholder="123">
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="control-panel-wrapper">
+                  <div class="container">
+                    <div id="btn-control" class="control-panel">
+                      <button class="btn btn-outline d-none hidden">上一步</button>
+                      <button class="btn btn-primary text-left">下一步 </button>
                     </div>
                   </div>
 
                 </div>
-                <div class="part ship-section  d-none">
-                  <h2 class="current-part-title">運送方式</h2>
-                  <div class="form-row">
-                    <div class="ship-way-wrapper">
-                      <div class="ship-way">
-                        <input name="ship" type="radio" value="standard"><label for="">標準運送 <br> 約 3~7 個工作天</label>
-                      </div>
-                      <div class="ship-price">免費<br></div>
-                    </div>
-                    <div class="ship-way-wrapper">
-                      <div class="ship-way">
-                        <input name="ship" type="radio" value="DHL"><label class="DHL-label" for="">DHL 貨運<br>48
-                          小時內送達</label>
-                      </div>
-                      <div class="ship-price">$500</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="part pay-section  d-none">
-                  <h2 class="current-part-title">付款資訊</h2>
-                  <div class="part-container">
-                    <div class="form-row"><label for="">持卡人姓名</label><input id="owner-name" type="text"
-                        placeholder="John Doe">
-                    </div>
-                    <div class="form-row">
-                      <label for="">卡號</label><input id="card-number" type="text" placeholder="1111 2222 3333 4444">
-                    </div>
-                    <div class="form-row">
-                      <div class="pay-half-area">
-                        <label for="">有效期限</label>
-                        <input id="expiration-date" type="text" placeholder="MM/YY">
-                      </div>
-                      <div class="pay-half-area">
-                        <label for="">CVC / CCV</label>
-                        <input id="card-code" type="text" placeholder="123">
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="control-panel-wrapper">
-                <div class="container">
-                  <div id="btn-control" class="control-panel">
-                    <button class="btn btn-outline d-none hidden">上一步</button>
-                    <button class="btn btn-primary text-left">下一步 </button>
-                  </div>
-                </div>
-
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="right-content">
-        <div class="cart">
-          <div class="container">
-            <h4>購物籃</h4>
-            <div class="card">
-              <img src="images/photo-1@2x.png" alt="">
-              <div class="product-info">
-                <h5>破壞補釘修身牛仔褲</h5>
-                <div class="amount-area">
-                  <i class="fas fa-minus"></i>
-                  <p>1</p>
-                  <i class="fas fa-plus"></i>
+        <div class="right-content">
+          <div class="cart">
+            <div class="container">
+              <h4>購物籃</h4>
+              <div class="card">
+                <img src="images/photo-1@2x.png" alt="">
+                <div class="product-info">
+                  <h5>破壞補釘修身牛仔褲</h5>
+                  <div class="amount-area">
+                    <i class="fas fa-minus"></i>
+                    <p>1</p>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <h5>$3,999</h5>
                 </div>
-                <h5>$3,999</h5>
               </div>
-            </div>
-            <div class="card">
-              <img src="images/photo-2@2x.png" alt="">
-              <div class="product-info">
-                <h5><span>破壞</span>刷色直筒牛仔褲</h5>
-                <div class="amount-area">
-                  <i class="fas fa-minus"></i>
-                  <p>1</p>
-                  <i class="fas fa-plus"></i>
+              <div class="card">
+                <img src="images/photo-2@2x.png" alt="">
+                <div class="product-info">
+                  <h5><span>破壞</span>刷色直筒牛仔褲</h5>
+                  <div class="amount-area">
+                    <i class="fas fa-minus"></i>
+                    <p>1</p>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <h5>$1,299</h5>
                 </div>
-                <h5>$1,299</h5>
               </div>
-            </div>
-            <div class="product-price">
-              <p>運費</p>
-              <p>免費</p>
-            </div>
-            <div class="product-price">
-              <p>小計</p>
-              <p>$5,298</p>
+              <div class="product-price">
+                <p>運費</p>
+                <p>免費</p>
+              </div>
+              <div class="product-price">
+                <p>小計</p>
+                <p>$5,298</p>
+              </div>
             </div>
           </div>
         </div>

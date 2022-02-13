@@ -257,15 +257,17 @@ body {
 }
 
 /* style start */
+.main-content-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
 .container {
   width: 95%;
   margin: 0 auto;
 }
 .step-title {
   font-size: 24px;
-}
-.main-container {
-  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 // stepper
@@ -746,6 +748,29 @@ $button-margin: 24px;
     & .btn-primary {
       width: 174px;
       padding-left: 48px;
+    }
+  }
+
+  // right-content
+  .cart {
+    height: 100%;
+    & h4 {
+      display: block;
+      margin: 32px 24px;
+      font-size: 18px;
+    }
+    & .container {
+      justify-content: unset;
+      &::after {
+        display: none;
+      }
+    }
+    & .card {
+      margin-bottom: 34px;
+    }
+    & .product-price {
+      margin-bottom: 32px;
+      height: 37px;
     }
   }
 }

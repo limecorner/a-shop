@@ -577,15 +577,17 @@ body {
   cursor: pointer; }
 
 /* style start */
+.main-content-container {
+  max-width: 1080px;
+  margin: 0 auto; }
+
 .container {
   width: 95%;
   margin: 0 auto; }
 
 .step-title {
-  font-size: 24px; }
-
-.main-container {
-  margin-top: 48px; }
+  font-size: 24px;
+  margin-bottom: 48px; }
 
 .stepper-panel {
   outline: 2px solid red; }
@@ -926,5 +928,20 @@ select {
         visibility: hidden; }
     .control-panel .btn-primary {
       width: 174px;
-      padding-left: 48px; } }
+      padding-left: 48px; }
+  .cart {
+    height: 100%; }
+    .cart h4 {
+      display: block;
+      margin: 32px 24px;
+      font-size: 18px; }
+    .cart .container {
+      justify-content: unset; }
+      .cart .container::after {
+        display: none; }
+    .cart .card {
+      margin-bottom: 34px; }
+    .cart .product-price {
+      margin-bottom: 32px;
+      height: 37px; } }
 
