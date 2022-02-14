@@ -7,6 +7,16 @@ const nextBtn = btnControl.querySelector('.btn-primary')
 const prevBtn = btnControl.querySelector('.btn-outline')
 let step = 0
 
+// variables for amounts and price of products
+let totalPrice = 5298
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+});
+const cart = document.querySelector('.cart')
+const totalPriceElement = document.querySelector('.total-price')
+
 function handleBtnControlClicked(e) {
   e.preventDefault()
   const nowStep = steps[step]
@@ -50,4 +60,27 @@ function setBtnState() {
   }
 }
 
+// calculate amounts and price of products
+function handleBtnAmountClicked(e) {
+  if (!e.target.matches('.fas')) return
+  const productAmountElement = e.target.parentElement.children[1]
+  let productAmount = productAmountElement.innerText
+  const productInfoElement = productAmountElement.parentElement.parentElement
+  const eachPrice = Number(productInfoElement.dataset.price)
+  if (e.target.matches('.fa-minus')) {
+    if (productAmount <= 0) return
+    productAmount--
+    totalPrice -= eachPrice
+  }
+  if (e.target.matches('.fa-plus')) {
+    productAmount++
+    totalPrice += eachPrice
+  }
+  productAmountElement.innerText = productAmount
+  const pricesElement = productAmountElement.parentElement.nextElementSibling
+  pricesElement.innerText = formatter.format(productAmount * eachPrice)
+  totalPriceElement.innerText = formatter.format(totalPrice)
+}
+
 btnControl.addEventListener('click', handleBtnControlClicked)
+cart.addEventListener('click', handleBtnAmountClicked)
