@@ -1,3 +1,4 @@
+// variables for form control
 const form = document.querySelector('#a-form')
 const formParts = form.querySelectorAll('.part')
 const stepControl = document.querySelector('.stepper-panel')
@@ -17,6 +18,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 const cart = document.querySelector('.cart')
 const totalPriceElement = document.querySelector('.total-price')
 
+//  click button to control forms
 function handleBtnControlClicked(e) {
   e.preventDefault()
   const nowStep = steps[step]

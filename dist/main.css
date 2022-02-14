@@ -587,59 +587,55 @@ body {
 
 .step-title {
   font-size: 24px;
-  margin-bottom: 48px; }
+  margin-bottom: 24px; }
 
-.stepper-panel {
-  outline: 2px solid red; }
-  .stepper-panel .stepper-container {
-    outline: 2px solid blue;
+.stepper-panel .stepper-container {
+  display: flex;
+  height: 32px; }
+  .stepper-panel .stepper-container .step {
+    flex: 1;
     display: flex;
-    height: 32px; }
-    .stepper-panel .stepper-container .step {
-      outline: 2px solid pink;
-      flex: 1;
+    position: relative; }
+    .stepper-panel .stepper-container .step:nth-child(1) .circle-container::after {
+      content: "1";
+      color: #afb1bd; }
+    .stepper-panel .stepper-container .step:nth-child(2) .circle-container::after {
+      content: "2";
+      color: #afb1bd; }
+    .stepper-panel .stepper-container .step:nth-child(3) .circle-container::after {
+      content: "3";
+      color: #afb1bd; }
+    .stepper-panel .stepper-container .step.active .circle-container, .stepper-panel .stepper-container .step.checked .circle-container {
+      background-color: #000; }
+      .stepper-panel .stepper-container .step.active .circle-container::after, .stepper-panel .stepper-container .step.checked .circle-container::after {
+        color: #fff; }
+    .stepper-panel .stepper-container .step.active .connect-line, .stepper-panel .stepper-container .step.checked .connect-line {
+      background-color: #000; }
+    .stepper-panel .stepper-container .step.checked .circle-container::after {
+      content: "\2714"; }
+    .stepper-panel .stepper-container .step .circle-container {
       display: flex;
-      position: relative; }
-      .stepper-panel .stepper-container .step:nth-child(1) .circle-container::after {
-        content: "1";
-        color: #afb1bd; }
-      .stepper-panel .stepper-container .step:nth-child(2) .circle-container::after {
-        content: "2";
-        color: #afb1bd; }
-      .stepper-panel .stepper-container .step:nth-child(3) .circle-container::after {
-        content: "3";
-        color: #afb1bd; }
-      .stepper-panel .stepper-container .step.active .circle-container, .stepper-panel .stepper-container .step.checked .circle-container {
-        background-color: #000; }
-        .stepper-panel .stepper-container .step.active .circle-container::after, .stepper-panel .stepper-container .step.checked .circle-container::after {
-          color: #fff; }
-      .stepper-panel .stepper-container .step.active .connect-line, .stepper-panel .stepper-container .step.checked .connect-line {
-        background-color: #000; }
-      .stepper-panel .stepper-container .step.checked .circle-container::after {
-        content: "\2714"; }
-      .stepper-panel .stepper-container .step .circle-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 32px;
-        height: 32px;
-        border: 1px solid #afb1bd;
-        border-radius: 50%;
-        color: #afb1bd; }
-      .stepper-panel .stepper-container .step .connect-line {
-        z-index: 20;
-        position: absolute;
-        top: 16px;
-        height: 1px;
-        background-color: #afb1bd; }
-      .stepper-panel .stepper-container .step .connect-line-left {
-        left: calc(16px + 35%);
-        right: calc(-50% + 35%); }
-      .stepper-panel .stepper-container .step .connect-line-right {
-        left: calc(50% + 35%);
-        right: calc(-100% + 16px + 35%); }
-      .stepper-panel .stepper-container .step .label-container {
-        display: none; }
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #afb1bd;
+      border-radius: 50%;
+      color: #afb1bd; }
+    .stepper-panel .stepper-container .step .connect-line {
+      z-index: 20;
+      position: absolute;
+      top: 16px;
+      height: 1px;
+      background-color: #afb1bd; }
+    .stepper-panel .stepper-container .step .connect-line-left {
+      left: calc(16px + 35%);
+      right: calc(-50% + 35%); }
+    .stepper-panel .stepper-container .step .connect-line-right {
+      left: calc(50% + 35%);
+      right: calc(-100% + 16px + 35%); }
+    .stepper-panel .stepper-container .step .label-container {
+      display: none; }
 
 .current-part-title {
   margin-bottom: 24px; }
@@ -842,20 +838,13 @@ select {
     right: 25%;
     content: "\2192"; }
 
-.form-panel {
-  outline: 2px solid red; }
-  .form-panel .control-panel {
-    outline: 2px solid blue; }
-
-.right-content {
-  outline: 2px solid green; }
-
 @media screen and (min-width: 375px) {
   .main-container {
     display: flex;
     justify-content: space-around; }
+  .step-title {
+    margin-bottom: 48px; }
   .left-content {
-    outline: 2px solid green;
     display: flex;
     flex-flow: column;
     width: 50%;

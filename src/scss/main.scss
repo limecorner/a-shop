@@ -267,18 +267,18 @@ body {
 }
 .step-title {
   font-size: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 // stepper
 .stepper-panel {
-  outline: 2px solid red;
+  // outline: 2px solid red;
   & .stepper-container {
-    outline: 2px solid blue;
+    // outline: 2px solid blue;
     display: flex;
     height: 32px;
     & .step {
-      outline: 2px solid pink;
+      // outline: 2px solid pink;
       flex: 1;
       display: flex;
       position: relative;
@@ -604,16 +604,16 @@ $button-margin: 24px;
 }
 
 // outline areas
-.form-panel {
-  outline: 2px solid red;
-  & .control-panel {
-    outline: 2px solid blue;
-  }
-}
+// .form-panel {
+//   outline: 2px solid red;
+//   & .control-panel {
+//     outline: 2px solid blue;
+//   }
+// }
 
-.right-content {
-  outline: 2px solid green;
-}
+// .right-content {
+//   outline: 2px solid green;
+// }
 
 @media screen and (min-width: 375px) {
   // 大排版
@@ -621,8 +621,11 @@ $button-margin: 24px;
     display: flex;
     justify-content: space-around;
   }
+  .step-title {
+    margin-bottom: 48px;
+  }
   .left-content {
-    outline: 2px solid green;
+    // outline: 2px solid green;
     display: flex;
     flex-flow: column;
     width: 50%;
