@@ -19,18 +19,10 @@ const cart = document.querySelector('.cart')
 const totalPriceElement = document.querySelector('.total-price')
 
 //  click button to control forms
-function handleBtnControlClicked(e) {
+function handlePrevBtnClicked(e) {
   e.preventDefault()
-  const nowStep = steps[step]
-  if (e.target.matches('.btn-primary') && e.target.innerText === '下一步') {
-    const nextStep = steps[step + 1]
-    nowStep.classList.remove('active')
-    nowStep.classList.add('checked')
-    nextStep.classList.add('active')
-    formParts[step].classList.toggle('d-none')
-    formParts[step + 1].classList.toggle('d-none')
-    step += 1
-  } else if (e.target.matches('.btn-outline')) {
+  if (step === 1 || step === 2) {
+    const nowStep = steps[step]
     const prevStep = steps[step - 1]
     nowStep.classList.remove('active')
     prevStep.classList.remove('checked')
@@ -38,8 +30,23 @@ function handleBtnControlClicked(e) {
     formParts[step].classList.toggle('d-none')
     formParts[step - 1].classList.toggle('d-none')
     step -= 1
+    setBtnState()
   }
-  setBtnState()
+}
+
+function handleNextBtnClicked(e) {
+  e.preventDefault()
+  if (step === 0 || step === 1) {
+    const nowStep = steps[step]
+    const nextStep = steps[step + 1]
+    nowStep.classList.remove('active')
+    nowStep.classList.add('checked')
+    nextStep.classList.add('active')
+    formParts[step].classList.toggle('d-none')
+    formParts[step + 1].classList.toggle('d-none')
+    step += 1
+    setBtnState()
+  }
 }
 
 function setBtnState() {
@@ -56,9 +63,9 @@ function setBtnState() {
     nextBtn.classList.add('btn-mobile-half')
   }
   if (step === 2) {
-    nextBtn.innerText = '確認下單'
+    nextBtn.children[0].innerText = '確認下單'
   } else {
-    nextBtn.innerText = '下一步'
+    nextBtn.children[0].innerText = '下一步'
   }
 }
 
@@ -84,5 +91,7 @@ function handleBtnAmountClicked(e) {
   totalPriceElement.innerText = formatter.format(totalPrice)
 }
 
-btnControl.addEventListener('click', handleBtnControlClicked)
+prevBtn.addEventListener('click', handlePrevBtnClicked)
+nextBtn.addEventListener('click',
+  handleNextBtnClicked)
 cart.addEventListener('click', handleBtnAmountClicked)

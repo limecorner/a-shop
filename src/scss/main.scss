@@ -556,19 +556,19 @@ $button-margin: 24px;
     position: relative;
     height: 46px;
     border-radius: 8px;
-    &::before,
-    & span {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &::before {
-      font-size: 20px;
-    }
+    // &::before,
+    // & span {
+    //   position: absolute;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    // }
+    // &::before {
+    //   font-size: 20px;
+    // }
   }
   & .btn-outline {
     width: 30%;
-    background-color: pink;
+    // background-color: pink;
     &::before {
       left: 0;
       content: "\27F5";
@@ -576,12 +576,15 @@ $button-margin: 24px;
   }
   & .btn-primary {
     width: 100%;
-    padding-left: 35%;
+    // padding-left: 35%;
+    padding: 12px 60px;
     background-color: #f67599;
     color: #fff;
-    &::before {
-      right: 25%;
-      content: "\2192";
+    & span {
+      &::after {
+        content: "\2192";
+        padding-left: 16px;
+      }
     }
   }
 }
@@ -594,12 +597,7 @@ $button-margin: 24px;
 
 .btn-primary {
   &.btn-mobile-half {
-    width: 156px;
-    padding-left: 38px;
-    &::before {
-      right: 25%;
-      content: "\2192";
-    }
+    width: unset;
   }
 }
 
@@ -749,8 +747,9 @@ $button-margin: 24px;
       }
     }
     & .btn-primary {
-      width: 174px;
-      padding-left: 48px;
+      width: unset;
+      // width: 174px;
+      // padding-left: 48px;
     }
   }
 
